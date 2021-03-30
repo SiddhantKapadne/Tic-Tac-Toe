@@ -1,13 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+
 body {
+  background-color: #140D23;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Iceland', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Iceland', cursive;
+}
+
+.board {
+  width: 240px;
+  height: 240px;
+  background: #140D23;
+ 
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  /* gap: 1rem; */
+  margin: auto;
+}
+
+.gameArea{
+  text-align: center;
+}
+
+.squares {
+  width: 76px;
+  height: 76px;
+  background: #140D23;
+  border-radius: 9px;
+  border: none;
+  border-bottom: 2px solid #70EBA0;
+  box-shadow: 1px 1px 59px rgba(112, 235, 160, 0.21);
+  outline: none;
+  font-size: 60px;
+  cursor: pointer;
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+}
+
+.glow{
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  background: #140D23;
+  box-shadow: 5px 5px 75px 10px #FFFFFF;
+}
+
+.X{
+  color: #FF5454;
+  font-family: 'Iceland', cursive;
+  text-shadow: 1px 1px 24px rgba(255, 118, 118, 0.7);
+}
+
+.O{
+  font-family: 'Iceland', cursive;
+  color: #05D9E8;
+  text-shadow: 1px 1px 24px rgba(5, 217, 232, 0.7);
+}
+
+.title{
+  position: relative;
+  font-family: 'Iceland', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 48px;
+  color: #FCEA2D;
+  text-shadow: 1px 1px 0px #50DFFB, 0px 1px 90px rgba(147, 255, 248, 0.7);
+  border: 2px solid #50DFFB;
+  border-right: 15px solid #50DFFB;
+  width: 240px;
+  margin: 30px auto;
+  /* box-shadow: 1px 1px 30px rgba(80, 223, 251, 0.3); */
+  filter: drop-shadow(10px 1px 30px rgba(80, 223, 251, 0.5));
+}
+
+.reset{
+  font-family: 'Iceland', cursive;
+  background: #FCEA2D;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  clip-path: polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 40%);
+  margin-top: 25px;
+  transition: 0.2s;
+}
+
+.reset:hover {
+  box-shadow: 5px 4px 5px rgba(80, 223, 251, 0.73);
+}
+
+.reset:active {
+  font-size: 20px;
+}
+
+.close {
+  font-family: 'Iceland', cursive;
+  background: #ED4631;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  clip-path: polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 40%);
+  margin-top: 25px;
+  transition: 0.2s;
+}
+
+.close:hover {
+  background: #ED4631;
+  box-shadow: 5px 4px 5px rgba(80, 223, 251, 0.73);
+  color: #ED4631;
 }
